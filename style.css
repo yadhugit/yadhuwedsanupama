@@ -1,0 +1,430 @@
+/* Base Styles */
+
+
+
+:root {
+    --primary-color: #e75480; /* Romantic pink */
+    --secondary-color: #ffb6c1; /* Light pink */
+    --accent-color: #ff69b4; /* Hot pink */
+    --dark-color: #333;
+    --light-color: #fff;
+    --text-color: #555;
+    --heading-font: 'Playfair Display', serif;
+    --body-font: 'Montserrat', sans-serif;
+    --script-font: 'Dancing Script', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: #fff9fb;
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    color: var(--dark-color);
+    font-weight: 700;
+}
+
+.container {
+    max-width: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    min-height: 600px;
+    background: url('assets/anuyadhu.jpg') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--light-color);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.couple-names {
+    font-family: var(--script-font);
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    color: var(--light-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.save-the-date {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: var(--light-color);
+}
+
+.date-box {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 1.5rem 3rem;
+    border-radius: 5px;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.wedding-date {
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 5px;
+    color: var(--light-color);
+}
+
+/* Countdown Section */
+.countdown-section {
+    padding: 5rem 2rem;
+    text-align: center;
+    background-color: var(--light-color);
+}
+
+.countdown-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.countdown-box {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    min-width: 120px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-box span {
+    font-size: 3rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.countdown-box p {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Events Section */
+.events-section {
+    padding: 5rem 2rem;
+    background-color: #fff5f7;
+    text-align: center;
+}
+
+.events-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.event-card {
+    background-color: var(--light-color);
+    border-radius: 10px;
+    padding: 2.5rem;
+    margin: 1.5rem auto;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--primary-color);
+}
+
+.event-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.event-date, .event-time {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+}
+
+.event-location {
+    margin: 1.5rem 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.map-link {
+    display: inline-block;
+    margin: 1rem 0;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.map-link:hover {
+    color: var(--accent-color);
+}
+
+.calendar-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 1rem;
+    font-family: var(--body-font);
+}
+
+.calendar-btn:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Instagram Section */
+.instagram-section {
+    padding: 5rem 2rem;
+    text-align: center;
+    background-color: var(--light-color);
+}
+
+.instagram-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.instagram-embed {
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+/* Map Section */
+.map-section {
+    padding: 5rem 2rem;
+    text-align: center;
+    background-color: #fff5f7;
+}
+
+.map-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.map-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+footer p {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.social-icons {
+    margin: 2rem 0;
+}
+
+.social-icons a {
+    color: var(--light-color);
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--secondary-color);
+}
+
+.copyright {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .couple-names {
+        font-size: 3.5rem;
+    }
+    
+    .save-the-date {
+        font-size: 1.2rem;
+    }
+    
+    .wedding-date {
+        font-size: 2rem;
+    }
+    
+    .countdown-box {
+        min-width: 80px;
+        padding: 1rem;
+    }
+    
+    .countdown-box span {
+        font-size: 2rem;
+    }
+    
+    .countdown-box p {
+        font-size: 0.8rem;
+    }
+    
+    .events-section {
+        padding: 3rem 1rem;
+    }
+    
+    .event-card {
+        padding: 1.5rem;
+    }
+    
+    .map-section, .instagram-section {
+        padding: 3rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .couple-names {
+        font-size: 2.5rem;
+    }
+    
+    .date-box {
+        padding: 1rem 2rem;
+    }
+    
+    .wedding-date {
+        font-size: 1.5rem;
+    }
+    
+    .countdown-container {
+        gap: 1rem;
+    }
+    
+    .countdown-box {
+        min-width: 70px;
+        padding: 0.8rem;
+    }
+    
+    .countdown-box span {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* Gallery Section */
+.gallery-section {
+    padding: 5rem 2rem;
+    text-align: center;
+    background-color: var(--light-color);
+}
+
+.gallery-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 1/1;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive Gallery */
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
