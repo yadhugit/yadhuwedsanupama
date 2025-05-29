@@ -99,3 +99,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+
+// Update header countdown
+function updateHeaderCountdown() {
+    const countDownDate = new Date("Sep 7, 2025 00:00:00").getTime();
+    const now = new Date().getTime();
+    const distance = countDownDate - now;
+    
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    document.getElementById("header-days").innerHTML = days.toString().padStart(2, '0');
+    document.getElementById("header-hours").innerHTML = Math.floor(hours).toString().padStart(2, '0');
+    document.getElementById("header-minutes").innerHTML = Math.floor(minutes).toString().padStart(2, '0');
+    document.getElementById("header-seconds").innerHTML = seconds.toString().padStart(2, '0');
+}
+
+// Initial call
+updateHeaderCountdown();
+
+// Update every second
+setInterval(updateHeaderCountdown, 1000);
